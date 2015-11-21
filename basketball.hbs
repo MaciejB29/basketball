@@ -1,0 +1,230 @@
+//Map was created by Berserker
+{
+
+	"name" : "Basketball",
+
+	"width" : 600,
+
+	"height" : 340,
+
+	"spawnDistance" : 160,
+
+	"bg" : { "type" : "hockey", "height" : 300, "width" : 560, "cornerRadius" : 0, "kickOffRadius" : 800 },
+
+	"playerPhysics" : {
+		"kickingAcceleration" : 0.08,
+		"kickStrength" : -1.3
+
+	},
+
+	"ballPhysics" : {
+		"radius" : 9,
+		"invMass" : 2,
+		"color" : "ff9966",
+		"cMask" : [ "wall"
+		]
+
+	},
+
+	"traits" : {
+		"line" : { "cMask" : [ ] },
+		"lineS" : { "cMask" : [ ], "color" : "e9cc6e" },
+		"kickOffBarrier" : { "bCoef" : 0.1, "cGroup" : ["redKO","blueKO" ], "cMask" : ["red","blue" ] },
+		"kickOffBarrierS" : { "vis" : false, "bCoef" : 0.1, "cGroup" : ["redKO","blueKO" ], "cMask" : ["red","blue" ] },
+		"kickOffBarrierSV" : { "bCoef" : 0.1, "cGroup" : ["redKO","blueKO" ], "cMask" : ["red","blue" ], "color" : "e9cc6e" },
+		"table" : { "bCoef" : 1, "cMask" : ["all" ] },
+		"tableS" : { "bCoef" : 1, "cMask" : ["all" ], "color" : "000000" },
+		"basketN" : { "bCoef" : -2.5, "cMask" : ["ball" ] },
+		"basketSN" : { "bCoef" : -2.5, "cMask" : ["ball" ], "color" : "ff1700" },
+		"basketS" : { "bCoef" : -2.8, "cMask" : ["ball" ] },
+		"basketSS" : { "bCoef" : -2.8, "cMask" : ["ball" ], "color" : "ff1700" },
+		"goalNet" : { "bCoef" : 0, "cMask" : ["all" ] },
+		"goalNetS" : { "bCoef" : 0, "cMask" : ["all" ], "color" : "ffffff" },
+		"ballArea" : { "bCoef" : 1, "cMask" : ["ball" ] }
+
+	},
+
+	"vertexes" : [
+		/* 0 */ { "x" : -560, "y" : -250, "trait" : "line" },
+		/* 1 */ { "x" : -470, "y" : -250, "trait" : "line" },
+		/* 2 */ { "x" : 560, "y" : -250, "trait" : "line" },
+		/* 3 */ { "x" : 470, "y" : -250, "trait" : "line" },
+		/* 4 */ { "x" : -560, "y" : 250, "trait" : "line" },
+		/* 5 */ { "x" : -470, "y" : 250, "trait" : "line" },
+		/* 6 */ { "x" : 560, "y" : 250, "trait" : "line" },
+		/* 7 */ { "x" : 470, "y" : 250, "trait" : "line" },
+		/* 8 */ { "x" : -560, "y" : -90, "trait" : "line" },
+		/* 9 */ { "x" : -320, "y" : -90, "trait" : "line" },
+		/* 10 */ { "x" : 560, "y" : -90, "trait" : "line" },
+		/* 11 */ { "x" : 320, "y" : -90, "trait" : "line" },
+		/* 12 */ { "x" : -560, "y" : 90, "trait" : "line" },
+		/* 13 */ { "x" : -320, "y" : 90, "trait" : "line" },
+		/* 14 */ { "x" : 560, "y" : 90, "trait" : "line" },
+		/* 15 */ { "x" : 320, "y" : 90, "trait" : "line" },
+		
+		/* 16 */ { "x" : 0, "y" : 300, "trait" : "kickOffBarrier" },
+		/* 17 */ { "x" : 0, "y" : -300, "trait" : "kickOffBarrier" },
+		/* 18 */ { "x" : 0, "y" : -70, "trait" : "kickOffBarrier" },
+		/* 19 */ { "x" : 0, "y" : 70, "trait" : "kickOffBarrier" },
+		/* 20 */ { "x" : 0, "y" : 340, "trait" : "kickOffBarrier" },
+		/* 21 */ { "x" : 0, "y" : -340, "trait" : "kickOffBarrier" },
+		
+		/* 22 */ { "x" : -485, "y" : -60, "trait" : "line" },
+		/* 23 */ { "x" : -485, "y" : 60, "trait" : "line" },
+		/* 24 */ { "x" : 485, "y" : -60, "trait" : "line" },
+		/* 25 */ { "x" : 485, "y" : 60, "trait" : "line" },
+		/* 26 */ { "x" : 560, "y" : -10, "trait" : "line" },
+		/* 27 */ { "x" : 560, "y" : 10, "trait" : "line" },
+		/* 28 */ { "x" : 515, "y" : -10, "trait" : "line" },
+		/* 29 */ { "x" : 515, "y" : 10, "trait" : "line" },
+		/* 30 */ { "x" : 510, "y" : -5, "trait" : "line" },
+		/* 31 */ { "x" : 510, "y" : 5, "trait" : "line" },
+		/* 32 */ { "x" : 493, "y" : -12, "trait" : "line" },
+		/* 33 */ { "x" : 493, "y" : 12, "trait" : "line" },
+		/* 34 */ { "x" : 512.5, "y" : -66, "trait" : "line" },
+		/* 35 */ { "x" : 512.5, "y" : 66, "trait" : "line" },
+		
+		/* 36 */ { "x" : 510, "y" : -65, "trait" : "table" },
+		/* 37 */ { "x" : 510, "y" : 65, "trait" : "table" },
+		/* 38 */ { "x" : 515, "y" : -70, "trait" : "table" },
+		/* 39 */ { "x" : 515, "y" : 70, "trait" : "table" },
+		
+		/* 40 */ { "x" : -560, "y" : -10, "trait" : "line" },
+		/* 41 */ { "x" : -560, "y" : 10, "trait" : "line" },
+		/* 42 */ { "x" : -515, "y" : -10, "trait" : "line" },
+		/* 43 */ { "x" : -515, "y" : 10, "trait" : "line" },
+		/* 44 */ { "x" : -510, "y" : -5, "trait" : "line" },
+		/* 45 */ { "x" : -510, "y" : 5, "trait" : "line" },
+		/* 46 */ { "x" : -493, "y" : -12, "trait" : "line" },
+		/* 47 */ { "x" : -493, "y" : 12, "trait" : "line" },
+		/* 48 */ { "x" : -512.5, "y" : -66, "trait" : "line" },
+		/* 49 */ { "x" : -512.5, "y" : 66, "trait" : "line" },
+		
+		/* 50 */ { "x" : -510, "y" : -65, "trait" : "table" },
+		/* 51 */ { "x" : -510, "y" : 65, "trait" : "table" },
+		/* 52 */ { "x" : -515, "y" : -70, "trait" : "table" },
+		/* 53 */ { "x" : -515, "y" : 70, "trait" : "table" },
+		
+		/* 54 */ { "x" : -480, "y" : -18, "trait" : "basketN" },
+		/* 55 */ { "x" : -480, "y" : 18, "trait" : "basketN" },
+		/* 56 */ { "x" : 480, "y" : -18, "trait" : "basketN" },
+		/* 57 */ { "x" : 480, "y" : 18, "trait" : "basketN" },
+		
+		/* 58 */ { "x" : -480, "y" : -13, "trait" : "goalNet" },
+		/* 59 */ { "x" : -480, "y" : 13, "trait" : "goalNet" },
+		/* 60 */ { "x" : 480, "y" : -13, "trait" : "goalNet" },
+		/* 61 */ { "x" : 480, "y" : 13, "trait" : "goalNet" },
+		
+		/* 62 */ { "x" : 0, "y" : -340, "trait" : "line" },
+		/* 63 */ { "x" : 0, "y" : -303, "trait" : "line" },
+		/* 64 */ { "x" : 0, "y" : 303, "trait" : "line" },
+		/* 65 */ { "x" : 0, "y" : 340, "trait" : "line" },
+		/* 66 */ { "x" : -560, "y" : -13, "trait" : "line" },
+		/* 67 */ { "x" : -560, "y" : 13, "trait" : "line" },
+		/* 68 */ { "x" : 560, "y" : -13, "trait" : "line" },
+		/* 69 */ { "x" : 560, "y" : 13, "trait" : "line" },
+		
+		/* 70 */ { "x" : -510, "y" : -55, "bCoef" : 0, "cMask" : ["red" ] },
+		/* 71 */ { "x" : -510, "y" : 55, "bCoef" : 0, "cMask" : ["red" ] },
+		/* 72 */ { "x" : 510, "y" : -55, "bCoef" : 0, "cMask" : ["blue" ] },
+		/* 73 */ { "x" : 510, "y" : 55, "bCoef" : 0, "cMask" : ["blue" ] }
+
+	],
+
+	"segments" : [
+		{ "v0" : 0, "v1" : 1, "trait" : "lineS" },
+		{ "v0" : 2, "v1" : 3, "trait" : "lineS" },
+		{ "v0" : 4, "v1" : 5, "trait" : "lineS" },
+		{ "v0" : 6, "v1" : 7, "trait" : "lineS" },
+		{ "v0" : 1, "v1" : 5, "curve" : 180, "trait" : "lineS" },
+		{ "v0" : 3, "v1" : 7, "curve" : -180, "trait" : "lineS" },
+		{ "v0" : 8, "v1" : 9, "trait" : "lineS" },
+		{ "v0" : 10, "v1" : 11, "trait" : "lineS" },
+		{ "v0" : 12, "v1" : 13, "trait" : "lineS" },
+		{ "v0" : 14, "v1" : 15, "trait" : "lineS" },
+		{ "v0" : 9, "v1" : 13, "curve" : 180, "trait" : "lineS" },
+		{ "v0" : 11, "v1" : 15, "curve" : -180, "trait" : "lineS" },
+		
+		{ "v0" : 16, "v1" : 19, "trait" : "kickOffBarrierSV" },
+		{ "v0" : 17, "v1" : 18, "trait" : "kickOffBarrierSV" },
+		
+		{ "v0" : 16, "v1" : 20, "trait" : "kickOffBarrierS" },
+		{ "v0" : 17, "v1" : 21, "trait" : "kickOffBarrierS" },
+		
+		{ "v0" : 18, "v1" : 19, "curve" : 180, "cGroup" : ["redKO" ], "trait" : "kickOffBarrierSV" },
+		{ "v0" : 18, "v1" : 19, "curve" : -180, "cGroup" : ["blueKO" ], "trait" : "kickOffBarrierSV" },
+		
+		{ "v0" : 22, "v1" : 23, "curve" : 180, "trait" : "lineS" },
+		{ "v0" : 24, "v1" : 25, "curve" : -180, "trait" : "lineS" },
+		
+		{ "v0" : 28, "v1" : 26, "color" : "000000", "trait" : "line" },
+		{ "v0" : 29, "v1" : 27, "color" : "000000", "trait" : "line" },
+		{ "v0" : 31, "v1" : 33, "color" : "000000", "trait" : "line" },
+		{ "v0" : 30, "v1" : 32, "color" : "000000", "trait" : "line" },
+		{ "v0" : 34, "v1" : 35, "color" : "ffffff", "trait" : "line" },
+		
+		{ "v0" : 36, "v1" : 37, "trait" : "tableS" },
+		{ "v0" : 38, "v1" : 36, "trait" : "tableS" },
+		{ "v0" : 39, "v1" : 37, "trait" : "tableS" },
+		{ "v0" : 39, "v1" : 38, "trait" : "tableS" },
+		
+		{ "v0" : 42, "v1" : 40, "color" : "000000", "trait" : "line" },
+		{ "v0" : 43, "v1" : 41, "color" : "000000", "trait" : "line" },
+		{ "v0" : 45, "v1" : 47, "color" : "000000", "trait" : "line" },
+		{ "v0" : 44, "v1" : 46, "color" : "000000", "trait" : "line" },
+		{ "v0" : 48, "v1" : 49, "color" : "ffffff", "trait" : "line" },
+		
+		{ "v0" : 50, "v1" : 51, "trait" : "tableS" },
+		{ "v0" : 52, "v1" : 50, "trait" : "tableS" },
+		{ "v0" : 53, "v1" : 51, "trait" : "tableS" },
+		{ "v0" : 53, "v1" : 52, "trait" : "tableS" },
+		
+		{ "v0" : 54, "v1" : 55, "curve" : 180, "trait" : "basketSN" },
+		{ "v0" : 56, "v1" : 57, "curve" : -180, "trait" : "basketSN" },
+		
+		{ "v0" : 54, "v1" : 55, "curve" : -180, "trait" : "basketSS" },
+		{ "v0" : 56, "v1" : 57, "curve" : 180, "trait" : "basketSS" },
+		
+		{ "v0" : 58, "v1" : 59, "curve" : -180, "trait" : "goalNetS" },
+		{ "v0" : 60, "v1" : 61, "curve" : -180, "trait" : "goalNetS" },
+		{ "v0" : 58, "v1" : 59, "curve" : 180, "trait" : "goalNetS" },
+		{ "v0" : 60, "v1" : 61, "curve" : 180, "trait" : "goalNetS" },
+		
+		{ "v0" : 62, "v1" : 63, "color" : "555555", "trait" : "line" },
+		{ "v0" : 64, "v1" : 65, "color" : "555555", "trait" : "line" },
+		
+		{ "v0" : 66, "v1" : 67, "trait" : "lineS" },
+		{ "v0" : 68, "v1" : 69, "trait" : "lineS" },
+		
+		{ "v0" : 70, "v1" : 71, "curve" : 228, "vis" : false, "bCoef" : 0, "cMask" : ["red" ] },
+		{ "v0" : 72, "v1" : 73, "curve" : -228, "vis" : false, "bCoef" : 0, "cMask" : ["blue" ] }
+
+	],
+
+	"goals" : [
+		{ "p0" : [490,0 ], "p1" : [470,0 ], "team" : "blue" },
+		{ "p0" : [480,10 ], "p1" : [480,-10 ], "team" : "blue" },
+		{ "p0" : [-480,10 ], "p1" : [-480,-10 ], "team" : "red" },
+		{ "p0" : [-470,0 ], "p1" : [-490,0 ], "team" : "red" }
+
+	],
+
+	"discs" : [
+		{ "radius" : 5, "invMass" : 0, "pos" : [-525,0 ], "color" : "ff0000", "bCoef" : 2, "cMask" : ["red" ] },
+		{ "radius" : 5, "invMass" : 0, "pos" : [525,0 ], "color" : "0000ff", "bCoef" : 2, "cMask" : ["blue" ] }
+
+	],
+
+	"planes" : [
+		{ "normal" : [0,1 ], "dist" : -300, "trait" : "ballArea" },
+		{ "normal" : [0,-1 ], "dist" : -300, "trait" : "ballArea" },
+		{ "normal" : [1,0 ], "dist" : -560, "trait" : "ballArea" },
+		{ "normal" : [-1,0 ], "dist" : -560, "trait" : "ballArea" },
+		
+		{ "normal" : [0,1 ], "dist" : -340, "bCoef" : 0, "cMask" : ["all" ] },
+		{ "normal" : [0,-1 ], "dist" : -340, "bCoef" : 0, "cMask" : ["all" ] },
+		{ "normal" : [1,0 ], "dist" : -600, "bCoef" : 0, "cMask" : ["all" ] },
+		{ "normal" : [-1,0 ], "dist" : -600, "bCoef" : 0, "cMask" : ["all" ] }
+
+	]
+}
